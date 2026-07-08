@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Synod_final
+</title>
+<meta charset="utf-8">
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-storydata
+{
+	display: block !important;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Synod_final
+</h1>
+<tw-storydata name="Synod_final" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="190D5234-04B7-4CB2-B339-4AABEB004D78" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* =========================
+   BASE (TWINE FIX)
+========================= */
+
+body {
+  height: 100vh;
+  margin: 0;
+
+  background:
+    radial-gradient(circle at 30% 20%, #1b2a3a 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, #0b1a2a 0%, transparent 50%),
+    linear-gradient(180deg, #020409 0%, #0a1622 60%, #05070c 100%);
+}
+
+body.forest {
+  background: linear-gradient(#0b2e13, #06150a);
+  color: #d8ffd8;
+}
+
+.rain {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.drop {
+  position: absolute;
+  top: -20vh;
+
+  width: 2px;
+  height: 18px;
+
+  background: rgba(188, 208, 255, 0.7);
+
+  opacity: 0.6;
+
+  transform: translateY(-20vh);
+
+  animation: fall linear infinite;
+
+  animation-play-state: paused; /* 🔥 START ZATRZYMANY */
+}
+
+.rain.active .drop {
+  animation-play-state: running; /* 🔥 START PO INIT */
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20vh);
+  }
+
+  100% {
+    transform: translateY(140vh);
+  }
+}
+
+#timeline {
+    position: absolute;
+    top: 0;
+    left: var(--ui-bar-width, 17em);
+    right: 0;
+
+    height: 80px;
+  	width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 0 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    z-index: 9999;
+}
+
+/* pozioma linia */
+#timeline::before {
+    content: "";
+    position: absolute;
+
+    left: 40px;
+    right: 40px;
+    top: 27px;
+
+    height: 4px;
+
+    background: #777;
+}
+
+.timeline-event {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    width: 120px;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    background: #4CAF50;
+    border: 3px solid white;
+}
+
+.timeline-title {
+    margin-top: 10px;
+    font-size: .8em;
+}
+
+.timeline-event {
+    opacity: .4;
+    transition: .25s;
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #666;
+    transition: .25s;
+}
+
+.timeline-event.active {
+    opacity: 1;
+}
+
+.timeline-event.active .timeline-dot {
+    background: #4CAF50;
+    transform: scale(1.4);
+    box-shadow: 0 0 10px #4CAF50;
+}
+
+.timeline-event.active .timeline-title {
+    color: white;
+    font-weight: bold;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(window,function(a){var b,c,d,e,f,g,h,i,j,k,l;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",!b||"object"==typeof b.adj}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){i=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},j=function(a,b){return"rgba("+i(a.substr(0,2))+","+i(a.substr(2,2))+","+i(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var m=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b){a.moveTo(c[0]+d,c[1]+e);for(var f=2;f<c.length;f+=2)a.lineTo(c[f]+d,c[f+1]+e)}else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var h=b.getContext("2d");if(e.shadow){h.save(),"inside"==e.shadowPosition&&(m(h,c,d),h.clip());var i=100*b.width,k=100*b.height;m(h,c,d,i,k),h.shadowOffsetX=e.shadowX-i,h.shadowOffsetY=e.shadowY-k,h.shadowBlur=e.shadowRadius,h.shadowColor=j(e.shadowColor,e.shadowOpacity);var l=e.shadowFrom;l||(l="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==l?(h.strokeStyle="rgba(0,0,0,1)",h.stroke()):"fill"==l&&(h.fillStyle="rgba(0,0,0,1)",h.fill()),h.restore(),"outside"==e.shadowPosition&&(h.save(),m(h,c,d),h.globalCompositeOperation="destination-out",h.fillStyle="rgba(0,0,0,1);",h.fill(),h.restore())}h.save(),m(h,c,d),e.fill&&(h.fillStyle=j(e.fillColor,e.fillOpacity),h.fill()),e.stroke&&(h.strokeStyle=j(e.strokeColor,e.strokeOpacity),h.lineWidth=e.strokeWidth,h.stroke()),h.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},l=function(b,c){var d=a(b);return a.extend({},c,!!a.metadata&&d.metadata(),d.data("maphilight"))},k=function(a){return!!a.complete&&("undefined"==typeof a.naturalWidth||0!==a.naturalWidth)},h={position:"absolute",left:0,top:0,padding:0,border:0};var n=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||n||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),n=!0),this.each(function(){var j,m,n,o,p,q,s;if(j=a(this),!k(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,!!a.metadata&&j.metadata(),j.data("maphilight")),s=j.get(0).getAttribute("usemap"),s&&(o=a('map[name="'+s.substr(1)+'"]'),j.is('img,input[type="image"]')&&s&&o.length>0)){if(j.hasClass("maphilighted")){var t=j.parent();j.insertBefore(t),t.remove(),a(o).unbind(".maphilight")}m=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?m.addClass(a(this).attr("class")):m.addClass(n.wrapClass)),j.before(m).css("opacity",0).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),m.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=l(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight, focus.maphilight",function(b){var d,f,h=b.target;if(f=l(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=l(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight, blur.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"ee00cc",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});
+
+$("img[usemap]").maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: '00cc99',    	// HEX format without the starting "#"
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: '00cc99',
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: '000000',
+  shadowOpacity: 0.8,
+  shadowPosition: 'outside',
+  shadowFrom: false
+});
+
+
+(function () {
+
+  function createRain() {
+    const rain = document.querySelector(".rain");
+    if (!rain) return;
+
+    if (rain.dataset.done === "1") return;
+    rain.dataset.done = "1";
+
+    const COUNT = 250;
+
+    for (let i = 0; i < COUNT; i++) {
+      const drop = document.createElement("div");
+      drop.className = "drop";
+
+      drop.style.left = Math.random() * 100 + "vw";
+      drop.style.animationDuration = (0.6 + Math.random() * 1.5) + "s";
+      drop.style.animationDelay = (Math.random() * 2) + "s";
+      drop.style.opacity = Math.random();
+
+      rain.appendChild(drop);
+    }
+
+    // 🔥 KLUCZ: start animacji PO renderze
+    requestAnimationFrame(() => {
+      rain.classList.add("active");
+    });
+
+    console.log("RAIN STABLE START");
+  }
+
+  function boot() {
+    const obs = new MutationObserver(() => createRain());
+    obs.observe(document.body, { childList: true, subtree: true });
+
+    createRain();
+  }
+
+  boot();
+
+})();
+
+
+
+window.setScene = function(scene) {
+  State.variables.scene = scene;   // logika gry
+  document.body.className = scene; // wygląd
+};
+
+window.getScene = function() {
+  return State.variables.scene;
+};
+
+window.renderTimeline = function () {
+
+    const old = document.getElementById("timeline");
+    if (old) old.remove();
+
+    const events = ["zupa", "mleko"];
+
+    const timeline = document.createElement("div");
+    timeline.id = "timeline";
+
+    events.forEach((event, index) => {
+
+        const item = document.createElement("div");
+        item.className = "timeline-event";
+      console.log(State.variables);
+       if (index === State.variables.activeEvent) {
+        item.classList.add("active");
+    	}
+
+        item.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-title">${event}</div>
+        `;
+
+        timeline.appendChild(item);
+    });
+
+    document.body.appendChild(timeline);
+};
+
+$(document).on(":passagedisplay", function () {
+    console.log("State:", State);
+    console.log("Variables:", State.variables);
+    renderTimeline();
+});
+
+window.nextTimelineEvent = function () {
+    const vars = State.variables;
+
+    if (vars.activeEvent < vars.timeline.length - 1) {
+        vars.activeEvent++;
+        renderTimeline();
+    }
+};
+
+window.setTimelineEvent = function (index) {
+    const vars = State.variables;
+
+    if (index >= 0 && index < vars.timeline.length) {
+        vars.activeEvent = index;
+        renderTimeline();
+    }
+};
+
+$(document).one(":storyready", function () {
+    console.log("Story ready:", State.variables);
+});
+
+$(document).on(":storyready", function () {
+
+    const vars = State.variables;
+
+    vars.activeEvent = 0;
+  console.log(vars)
+
+});</script><tw-passagedata pid="1" name="Nienazwana scena" tags="" position="1475,0" size="100,100">&lt;!-- &lt;&lt;run setScene(&quot;forest&quot;)&gt;&gt; --&gt;
+
+&lt;div class=&quot;rain&quot;&gt;&lt;/div&gt;
+&lt;h1&gt; Synod Plenarny&lt;/h1&gt;
+
+&lt;p&gt;
+&lt;h3 style=&quot;line-height: 0; margin: 0; padding: 0;&quot;&gt;Przegląd od AI:&lt;/h3&gt;
+Synod plenarny to zebranie wszystkich biskupów oraz przedstawicieli duchowieństwa, osób konsekrowanych i świeckich z terenu całego kraju, którego celem jest omówienie wyzwań duszpasterskich i wytyczenie kierunków rozwoju Kościoła. Więcej informacji o strukturach i historii polskich synodów znajdziesz na oficjalnym portalu Episkopatu Polski.
+&lt;/p&gt;
+
+&lt;h2&gt;[[start]]&lt;/h2&gt;
+</tw-passagedata><tw-passagedata pid="2" name="mapa" tags="" position="1450,350" size="100,100">
+&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;00cc99&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;00cc99&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area alt=&quot;Kuchnia&quot; title=&quot;Kuchnia&quot; data-passage=&quot;Kuchnia&quot; coords=&quot;600,1062,683,1147&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;Cmentarz&quot; title=&quot;Cmentarz&quot; data-passage=&quot;Cmentarz&quot; coords=&quot;490,91,701,455&quot; shape=&quot;rect&quot;&gt;
+        &lt;area target=&quot;KORYTARZ&quot; alt=&quot;KORYTARZ&quot; title=&quot;KORYTARZ&quot; data-passage=&quot;KORYTARZ&quot; coords=&quot;687,1075,767,468&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="3" name="test2" tags="" position="750,550" size="100,100">test2</tw-passagedata><tw-passagedata pid="4" name="Dormitorium" tags="" position="475,475" size="100,100">&lt;h3&gt;dormitorium&lt;/h3&gt;
+Wszedł do swojego pokoju i od razu zajął się butami. Rude ślady pokrywały także nogawki ciemnych spodni. Nigdy w życiu nie założył dżinsu. Włożył obuwie do wanny pod strumień wody. Praktycznie zeszło, ale i tak złapał gąbkę i zaczął szorować. Kiedy skończył zmienił spodnie na czyste. Spojrzał na brudną parę i po chwili namysłu wrzucił ją do kosza.
+W pokoju było przepastne biurko, na które padało przyjemne światło z zewnątrz. Usiadł ciężko i pogładził stertę dokumentów. Wszystko zaczęło się komplikować. Musi uważać na kolejne ruchy. Oparł się łokciami o blat i zapatrzył się na wirydarz. W dole, pod wielkim drzewem coś się ruszało. Wytężył wzrok i zobaczył dwie postaci. Jedną ubraną w sutannę, a drugą w dziwnym białym łachmanie. Może to była piżama. Zwątpił. Właściwie było jeszcze wcześnie. Potrzebował coś zjeść. Postaci za oknem ruszały się niespokojnie. Jasna postać chyba wymachiwała rękami.
+Usłyszał trzask drzwi na korytarzu i lekko podskoczył. Nigdy nie wiadomo kto na ciebie patrzy.</tw-passagedata><tw-passagedata pid="5" name="Wirydarz" tags="" position="625,550" size="100,100">Wirydarz
+</tw-passagedata><tw-passagedata pid="6" name="Refektarz" tags="" position="475,325" size="100,100">Refe</tw-passagedata><tw-passagedata pid="7" name="Kościół" tags="" position="750,675" size="100,100">&lt;h1&gt;Kościół&lt;/h1&gt;
+&lt;img src=&quot;Kosciol.png&quot;/&gt;
+&lt;p&gt;
+Wnętrze kościoła jest bardzo eleganckie i monumentalne w swojej prostocie. Jasne ściany i sufity odbijają wpadają przez wysokie okna światło, rozświetlając całe wnętrze.  
+Często można słyszeć [[modlitwy-&gt;gpt_prey]]
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="8" name="Spiżarnia" tags="" position="875,675" size="100,100">Spiżarnia</tw-passagedata><tw-passagedata pid="9" name="Kuchnia" tags="" position="750,800" size="100,100">Kucnia</tw-passagedata><tw-passagedata pid="10" name="Cmentarz" tags="" position="625,800" size="100,100">&lt;h1&gt;Cmentarz&lt;/h1&gt; \
+&lt;p&gt; \
+Zmarli byli tutaj na doczepkę. Większość napisów na kamiennych płytach zatarła się lata temu. Starszy pan, wynajęty przez duchownych, doglądał alejek, pilnując czy przypadkiem nie wyłania się na nich jakiś chwast. Czasem za mur cmentarzyska zakradała się miejscowa młodzież, urządzając libacje w środku nocy. Dzień po nich, na końcu kompleksu, zaraz za starymi olchami, stary ogrodnik znajdował porzucone butelki i porozdzierane torebki po chipsach. Właśnie w tym zakątku, ukrytym delikatnie przed zerkającymi od strony klasztoru, stał kremowy nagrobek z piaskowca z figurą Matki Boskiej. Można było przy nim usiąść na drewnianej ławce z pękniętym środkowym szczeblem. Na ziemi, w cieniu figury leżał męski zegarek, zapomniany, a może porzucony w pośpiech
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="11" name="Piekarnia" tags="" position="750,925" size="100,100">&lt;h1&gt;Piekarnia&lt;/h1&gt; \
+&lt;p&gt; \
+Przestrzeń na planie kwadratu. Na dwóch ścianach po bokach od wejścia stoją duże regały magazynowe z szerokimi półkami z grubej dykty, na które wykładane są bułki i chleb po upieczeniu. Na wprost od wejścia na całej ścianie stoją piece do wypiekania. 
+
+Na środku pomieszczenia znajduje się duży stół, na którym przygotowywane jest ciasto. Są tam też mechaniczne miksery. W narożnikach stoją worki z mąką. I pojemniki na sól i ziarna. Po prawej stronie od wejścia na ścianie, na której są drzwi jest umywalka. x \
+&lt;/p&gt;</tw-passagedata><tw-passagedata pid="12" name="Browar" tags="" position="875,825" size="100,100">browar</tw-passagedata><tw-passagedata pid="13" name="start" tags="" position="1450,150" size="100,100">&lt;style&gt;
+.scene {
+  position: relative;
+  font-family: serif;
+  line-height: 1.6;
+  color: #e8e6e3;
+  font-size: 1.4rem;
+}
+
+span{
+font-size: 22px;
+}
+
+/* reset spacing */
+.scene * {
+  margin: 0;
+  padding: 0;
+}
+
+/* tytuł */
+.float-title {
+  display: block;
+  margin-bottom: 1rem;
+  animation: floaty 6s ease-in-out infinite;
+  text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* linie tekstu */
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 1.2s forwards;
+}
+
+/* delay system */
+.d1 { animation-delay: 0.3s; }
+.d2 { animation-delay: 0.8s; }
+.d3 { animation-delay: 1.3s; }
+.d4 { animation-delay: 1.8s; }
+.d5 { animation-delay: 2.3s; }
+.d6 { animation-delay: 2.8s; }
+
+/* link */
+a {
+  color: #9ad1ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 8px rgba(150,200,255,0.8);
+}
+
+/* animacje */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floaty {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;scene emotional-scene&quot;&gt;
+
+  &lt;h3 class=&quot;float-title&quot;&gt;Zostawił mnie tu samą, mój syn.&lt;/h3&gt;
+  &lt;span class=&quot;line d1&quot;&gt;Obiecał, że też pojadę...&lt;/span&gt; \
+  &lt;span class=&quot;line d2&quot;&gt; \
+    Przecież nawet będzie ten nasz proboszcz teraz już biskup. \
+  &lt;/span&gt; \
+  &lt;span class=&quot;line d3&quot;&gt; \
+    Taki był szczęśliwy, gdy mi opowiadał.
+    Że będą wszyscy,
+    że w końcu zrobi ten swój materiał. \
+  &lt;/span&gt; \
+  &lt;span class=&quot;line d4&quot;&gt;Gdzie to było...? [[kościół, albo... jakiś klasztor-&gt;mapa]]&lt;/span&gt; \
+  &lt;span class=&quot;line d5&quot;&gt; Na pewno zapomniał.
+  Przecież wie, jak mi zależy. &lt;/span&gt; \
+  &lt;span class=&quot;line d6&quot;&gt; \
+  Taka okazja już się nie zdarzy.
+  Na pewno zapomniał.
+  Przecież mnie kocha.&lt;/span&gt;
+  
+  [[PROLOG]]
+ 
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="gpt_prey" tags="" position="625,925" size="100,100">&lt;h3&gt; kościół, koronka do miłosierdzia &lt;/h3&gt;
+Myśli pędziły. Chyba teraz
+musi odczytać z tej strony. A może to było na innej zakładce?
+Ciągle śpiewali, więc miał chwilę. Otworzył teczkę z notatkami
+z poprzedniego posiedzenia i chwycił tablet. Odpalił Chata i wpisał
+zapytanie o kolejność odprawiania mszy. Na ekranie wyskoczyła mu
+ściana tekstu. Zaczął szybko czytać w myślach i w porę
+wychwycił fragment, który powinien za chwilę odczytać zebranym.
+Jego głos poniósł się po sali. Odczytał fragment z Ewangelii, po
+
+czym wszyscy usiedli. Myśli odpłynęły mu do bladej twarzy
+Janusza. Jego pewnie wyglądała tak samo. Byli w szoku. Po czymś
+takim, kto by nie był? Uniósł wzrok na zapełnione ławki. Oni
+jeszcze nie wiedzieli...a patrzyli jakby czekali, aż jego usta się
+otworzą i powie, i powie… ah tak! Przecież teraz miał wygłaszać
+homilię! Uderzyła go fala gorąca. Ostatni raz odprawiał mszę
+sam, bez wikariusza, jakieś piętnaście lat temu. Przecież przez
+to wszystko nawet nie przygotował sobie tekstu. Spojrzał na tablet
+i wpisał drżącym palcem w komendę: „tekst homilii”. Chat
+napisał kazanie i Jeremiasz zaczął czytać:
+
+Drodzy w wierze,
+W
+dzisiejszym zabieganym świecie łatwo ulegamy złudzeniu, że nasza
+wartość i szczęście mierzone są stanem konta, sukcesami czy
+liczbą posiadanych rzeczy. Bardzo szybko wpadamy w pułapkę
+myślenia: „będę
+szczęśliwy, gdy tylko zdobędę... kupię... osiągnę”.
+
+Jego wzrok zaszedł mgłą, a małe litery stawiały opór w czasie
+czytania. Dotknął palcami ekranu, aby powiększyć tekst i przez
+przypadek kliknął ikonkę głośnika. Po kościele poniósł się
+uwodzicielski głos kobiety, który zaczął czytać kazanie od
+początku. Spanikowany Jeremiasz próbował wyłączyć Chata, ale
+nawet po jego zamknięciu, głos nie ucichł.
+
+Życie człowieka nie jest sumą jego dóbr materialnych.
+Pieniądze i rzeczy są w porządku, kiedy służą dobru i pomagają
+nam żyć. Stają się jednak problemem, kiedy to one zaczynają
+rządzić nami..
+
+Jeremiasz sapał głośno i zaczął nadawać do mikrofonu, próbując
+przekrzyczeć kobiecy głos. Po kościele niosły się szmery, głowy
+rozglądały się po sąsiadach, nikt do końca nie wiedział co się
+właściwie dzieje, a ona nadawała dalej. Jeremiasz w desperackim
+kroku zaczął naciskać guzik wyłącznika na tablecie, aż w końcu
+urządzenie umarło. Zresztą, nie ono pierwsze dzisiaj.</tw-passagedata><tw-passagedata pid="15" name="PROLOG" tags="" position="1775,200" size="100,100">Panuje cisza. Jedynym źródłem światła jest dogasająca świeca. Do kuchni wchodzi zamaskowana postać. Zamyka za sobą drzwi. Przez chwilę nasłuchuje. Nic. Na stole czeka misa z przygotowanym ciastem, a za nim rząd upieczonych już bochenków chleba. Obok leży niewielki płócienny woreczek. Dłonie powoli rozwiązują sznurek. Woreczek otwiera się z cichym szelestem. Zawartość wysypuje się na dłoń. Zatrzymuje się. Waha. Po chwili wsypuje jednak proszek do jednej porcji ciasta. Zaczyna wyrabiać. Powoli i dokładnie. Każdy ruch jest spokojny, niemal rytualny. Ciasto zostaje uformowane w okrągły bochenek, który trafia do pieca. Odczekuje kilkanaście minut, po czym wyjmuje chleb z pieca. Palec pozostawia na jego spodzie niewielki znak. Prawie niewidoczny krzyż. Chowa pusty woreczek. Gasi świecę. W ciemności zostaje tylko rząd identycznych bochenków. Jeden z nich różni się od pozostałych jedynie maleńkim znakiem, którego nikt rano nie zauważy.
+
+[[mapa]]
+</tw-passagedata><tw-passagedata pid="16" name="KUCHNIA MNICHÓW" tags="" position="1200,500" size="100,100">Halina wchodzi do kuchni z dwiema ciężkimi torbami pełnymi zakupów. Zaraz za nią pojawia się Julian, niosąc kolejne siatki, a fotograf wnosi skrzynkę z warzywami, którą z głośnym stuknięciem stawia na blacie. W kuchni panuje jeszcze względny spokój, ale wszyscy wiedzą, że za chwilę pozostali zaczną schodzić się na śniadanie.
+– Rozpakowujemy i bierzemy się do roboty – rzuca Halina, wyciągając z torby jajka i odkładając je ostrożnie na blat. – Im szybciej zaczniemy, tym mniej będzie później chaosu.
+Marcin bez słowa zabiera się za przygotowywanie śniadania. Wyciąga deskę do krojenia, opłukuje warzywa i zaczyna kroić szczypiorek, co chwilę zerkając na to, co jeszcze zostało do rozpakowania. Julian odkłada kolejne produkty na półki. Kiedy schyla się, żeby wyrzucić pustą papierową torbę, jego wzrok zatrzymuje się na niemal pełnym worku mąki leżącym w koszu na śmieci.
+– Serio? – mruczy bardziej do siebie niż do pozostałych. – Kto wyrzuca prawie całą mąkę?
+Wyciąga worek z kosza i otrzepuje go z kilku okruszków. Opakowanie wygląda na całe, nic nie wskazuje na to, że produkt jest zepsuty. Halina natychmiast reaguje.
+– Co tam znalazłeś?
+– Mąkę. Ktoś ją wyrzucił.
+Halina wzrusza ramionami.
+– To odstaw ją na miejsce. I nie trać czasu na stanie i gdybanie.
+Julian kiwa głową. Nie zastanawia się dłużej nad całą sytuacją. Stawia worek na półce obok pozostałych produktów i wraca do rozpakowywania zakupów, szybko o nim zapominając.
+Marcin w tym czasie rozbija jajka do miski.
+– Ilu nas dzisiaj będzie? – pyta.
+– Wszyscy. I pewnie każdy będzie chciał coś innego – odpowiada z grubym westchnieniem Halina, sięgając po talerze.
+Przez chwilę w kuchni słychać tylko odgłosy codziennej pracy: stukot naczyń, szelest papierowych toreb i rytmiczne uderzenia noża o deskę. Wśród dziesiątek produktów stojących na półkach niepozorny worek mąki niczym się nie wyróżnia. Nikt nie zwraca na niego większej uwagi.
+
+
+[[ZOSTAŃ W KUCHNI]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE]]
+</tw-passagedata><tw-passagedata pid="17" name="CMENTARZ" tags="" position="1450,500" size="100,100">Jeremiasz pogładził dłonią kremowy nagrobek z figurą Matki Boskiej. Patrzyła na niego smutno, jakby wiedziała co zamierza. Odwrócił wzrok i przeniósł go na zbliżającą się postać.
+- Musimy porozmawiać o głosowaniu. Słyszałem, że z jakiegoś powodu próbujesz blokować dotacje - zaczął Jeremiasz
+- Nie jestem głupi. Znowu wszystko pójdzie na lewo! - obruszył się nowo przybyły. 
+- Masz moje słowo, że część trafi bezpośrednio do twojej parafii.
+Jeremiasz zobaczył zwątpienie na twarzy rozmówcy i wiedział, że teraz już pójdzie łatwo.
+- Chyba nie chcesz kolejnej rewolucji muzyczno-internetowej. Ten młody szykuje na dzisiaj jakieś wystąpienia. Nie wiadomo kogo i do czego przekona… - kontynuował, z radością obserwując, że jego słowa osiągają zamierzony efekt. Janusz, choć niesamowicie konserwatywny, potrafił naginać zasady, gdy uważał, że walczy z większym złem. A tym złem był w tej chwili tik-tok.
+- Jeśli się nie wywiążesz napiszę do samego nuncjusza.
+Jeremiasz ukrył uśmiech zadowolenia i wyciągnął przed siebie dłoń. Ten uścisk rozwiązywał wiele problemów.
+
+[[ZOSTAŃ NA CMENTARZU]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE]]</tw-passagedata><tw-passagedata pid="18" name="KORYTARZ" tags="" position="1700,500" size="100,100">Przystanął na chwilę. Przestrzenie klasztoru napawały go spokojem. Czuł, że w nadchodzącym dniu zapadną odpowiednie decyzje, w końcu uzyskał już poparcie znacznej części zebranych. Jadłodajnie realnie wpływały na potrzebujących w jego diecezji. 
+
+Nagle kątem oka zobaczył ruch w oddali, na cmentarzu. Skierował się tam, stawiając uważne kroki. Wokół niego ćwierkały ptaki, witające wstający dzień. Zatrzymał się przy jednym z wysokich drzew. Nie wiedział co to było. Olcha? 
+
+Przy wielkim nagrobku z figurą anioła albo Matki Boskiej stały dwie postaci. Jedna z nich gwałtownie gestykulowała. Na pewno byli to mężczyźni, pewnie ktoś z synodu. Druga postać przestąpiła krok w bok i ujrzał jej twarz. Biskup Jeremiasz. Poczuł jak robi mu się gorąco. Największy wąż kościoła w kraju stał przed nim i prowadził spotkanie w dziwnym miejscu i o nietypowej porze. Przyjrzał mu się wyraźnie, ale twarz biskupa niczego nie zdradzała. Jego dłonie spoczywały spokojnie wzdłuż jego ciała, zrelaksowane. Zazgrzytał zębami. Spotkanie biskupa z nieznajomym nie wyglądało na spowiedź, więc musiało mieć związek ze sprawami, które będą dzisiaj rozstrzygane na głosowaniach. Wypuścił powietrze, był przygotowany. Wystarczy poczekać. 
+
+
+[[ZOSTAŃ NA KORYTARZU]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE]]</tw-passagedata><tw-passagedata pid="19" name="ROZEJRZYJ SIĘ PO SYNODZIE" tags="" position="1425,700" size="100,100">&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;00cc99&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;00cc99&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area alt=&quot;DORMITORIUM&quot; title=&quot;DORMITORIUM&quot; data-passage=&quot;DORMITORIUM&quot; coords=&quot;348,745,574,621&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;WIRYDARZ&quot; title=&quot;WIRYDARZ&quot; data-passage=&quot;WIRYDARZ&quot; coords=&quot;300,744,565,1037&quot; shape=&quot;rect&quot;&gt;
+        &lt;area alt=&quot;KORYTARZ 100&quot; title=&quot;KORYTARZ 100&quot; data-passage=&quot;KORYTARZ 100&quot; coords=&quot;687,1075,767,468&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="20" name="WIRYDARZ" tags="" position="1350,900" size="100,100">W wirydarzu panuje cisza, którą przerywa jedynie śpiew ptaków i odległy dźwięk kościelnego dzwonu. Tadeusz siedzi samotnie na kamiennej ławie. Ma opuszczoną głowę i wpatruje się nieruchomo w bruk pod swoimi stopami. Co jakiś czas porusza ustami, jakby prowadził z kimś cichą rozmowę, jednak wypowiadane przez niego słowa są zupełnie niezrozumiałe. Przez wirydarz przechodzi Robert. Zauważa siedzącego samotnie Tadeusza i na moment się zatrzymuje. Przygląda mu się z zaciekawieniem, po czym podchodzi bliżej.
+– Ojcze? Wszystko w porządku?
+Tadeusz nie reaguje. Nadal wpatruje się w ziemię i mamrocze coś pod nosem.
+Robert robi jeszcze kilka kroków.
+– Halo? Słyszysz mnie?
+Taduesz powoli unosi głowę, ale nie patrzy na rozmówcę. Jego wzrok jest pusty, jakby skupiał się na czymś znajdującym się daleko za nim. Po chwili ponownie opuszcza głowę i zaczyna mówić niskim, ochrypłym głosem.
+– Noli… audire… quod… sub… silentio… movetur…
+Robert marszczy czoło.
+– To jakaś nowa modlitwa?
+Tadeusz nie odpowiada. Jego głos staje się coraz bardziej monotonny i trudniejszy do zrozumienia.
+–Non ventus est… sed respirato eius qui nomina vestra iam scripsit in tenebris.
+Robert wyciąga telefon.
+– Dobra, sprawdźmy.
+Uruchamia Google Translate i włącza rozpoznawanie mowy. Ostrożnie przysuwa telefon bliżej Tadeusza. Na ekranie przez chwilę pojawiają się przypadkowe litery, które po sekundzie znikają. Aplikacja wyświetla komunikat:
+„Nie udało się rozpoznać mowy.”
+– Serio? – wzdycha Robert.
+Próbuje jeszcze raz. Tadeusz nagle milknie. Powoli odwraca głowę w stronę pustego fragmentu wirydarza i przez kilka sekund wpatruje się w miejsce, w którym nikogo nie ma.
+Po chwili bardzo szybko i wyraźnie recytuje całą formułkę na jednym wdechu:
+- Noli audire quod sub silentio movetur.
+Non ventus est… sed respiratio eius qui nomina vestra iam scripsit in tenebris.
+Claudite oculos — sed iam sero est.
+Quod videt te, non indiget luce.
+Sub pariete latet vox antiqua,
+et vox illa non loquitur…
+sed meminit.
+Fuge, si potes.
+Sed ostium non est extra te —
+ostium factum est ex te.
+Et nunc… aperitur.
+Robert odruchowo robi krok do tyłu.
+Kiedy ponownie spogląda na Tadeusza, ten znów siedzi nieruchomo, z opuszczoną głową, jak gdyby cała rozmowa nigdy się nie wydarzyła. Robert wyłącza telefon i chowa go do kieszeni. Odchodzi zdezorientowany, rzucając jeszcze jedno spojrzenie w stronę Tadeusza, który nadal mamrocze coś pod nosem.
+
+[[ZOSTAŃ NA WIRYDARZU-&gt;WIRYDARZ 2]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]
+</tw-passagedata><tw-passagedata pid="21" name="ZOSTAŃ W KUCHNI" tags="" position="1150,900" size="100,100">Kuchnia powoli wypełnia się zapachem przygotowywanego śniadania. Halina miesza coś w garnku, jednocześnie wydając krótkie polecenia pozostałym. Wszystko wydaje się przebiegać zgodnie z planem. Do kuchni wchodzi Janusz. Rozgląda się z wyraźnym niezadowoleniem.
+– To ma być gotowe śniadanie? – rzuca, nawet się nie witając.
+Halina odwraca się do niego.
+– Jest siódma rano. Zdążymy.
+Janusz podchodzi do blatu i zaczyna zaglądać do garnków.
+– Bałagan. Jak zwykle. Gdyby ktoś tu potrafił cokolwiek zorganizować...
+Halina odkłada łyżkę.
+– Jeśli masz jakiś problem, to powiedz konkretnie.
+– Problem? Problemem jest to, że od początku wszystko robicie byle jak. Talerze nieprzygotowane, pieczywo jeszcze niepodane. To wygląda jak kuchnia w akademiku, a nie w klasztorze.
+Halina bierze głęboki oddech.
+– To może następnym razem sam przygotujesz śniadanie, a ja odprawię mszę? 
+Janusz parska pogardliwie.
+– Nie mam czasu naprawiać cudzych błędów.
+Przez chwilę patrzą sobie prosto w oczy. W końcu Janusz odwraca się i wychodzi z kuchni, mrucząc jeszcze pod nosem coś o niekompetencji. Halina odprowadza go wzrokiem, po czym wzdycha.
+– Dobra... koniec przedstawienia. Wracamy do roboty.
+Pozostali wymieniają między sobą porozumiewawcze spojrzenia i wracają do przygotowywania śniadania, jakby podobne sytuacje zdarzały się tu regularnie.
+
+
+[[ZOSTAŃ W KUCHNI-&gt; ZOSTAŃ W KUCHNI 2]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]
+</tw-passagedata><tw-passagedata pid="22" name="KORYTARZ 100" tags="" position="1550,900" size="100,100">Julian niesie do jadalni skrzynkę z kubkami. Kiedy mija wejście do korytarza, zauważa Marcina stojącego na krześle. Ten rozgląda się uważnie, po czym przytwierdza niewielkie urządzenie do drewnianej belki pod sufitem.
+Julian zatrzymuje się i przez chwilę przygląda się całej sytuacji.
+– Co ty robisz?
+Marcin niemal podskakuje z zaskoczenia. Szybko zeskakuje z krzesła i próbuje zasłonić urządzenie własnym ciałem.
+– Nic.
+– Widzę.
+Zapada krótka cisza.
+– To kamera? – dopytuje Julian.
+Marcin wzdycha i kiwa głową.
+– Tak. Chcę nagrać materiał zza kulis. Wszyscy ciągle mówią, że w klasztorze nic się nie dzieje, a przecież codziennie wydarza się tu tyle absurdów, że nikt by nie uwierzył.
+Julian patrzy podejrzliwie na kamerę.
+– Wiesz, że większość ludzi nie lubi być nagrywana?
+– Dlatego nikomu nie mówię. Jak się dowiedzą, będą się zachowywać nienaturalnie.
+– Albo cię zabiją.
+Marcin uśmiecha się.
+– Wtedy też będzie świetny materiał.
+Julian przewraca oczami.
+– Jesteś niemożliwy.
+Marcin poprawia ustawienie kamery i dyskretnie wciska przycisk nagrywania. Mała dioda miga przez sekundę, po czym gaśnie.
+– Nikomu nie powiesz?
+Julian wzrusza ramionami.
+– Nic nie obiecuję.
+Odchodzi w stronę kuchni, zostawiając Marcina samego. Ten jeszcze raz sprawdza kadr, zadowolony z efektu, po czym schodzi z krzesła i rusza przygotowywać śniadanie.
+
+[[ZOSTAŃ NA KORYTARZU 100]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]
+</tw-passagedata><tw-passagedata pid="23" name="DORMITORIUM" tags="" position="1750,900" size="100,100">Wszedł do swojego pokoju i od razu zajął się butami. Rude ślady pokrywały także nogawki ciemnych spodni. Nigdy w życiu nie założył dżinsu. Włożył obuwie do wanny pod strumień wody. Praktycznie zeszło, ale i tak złapał gąbkę i zaczął szorować. Kiedy skończył zmienił spodnie na czyste. Spojrzał na brudną parę i po chwili namysłu wrzucił ją do kosza. W pokoju było przepastne biurko, na które padało przyjemne światło z zewnątrz. Usiadł ciężko i pogładził stertę dokumentów. Wszystko zaczęło się komplikować. Musi uważać na kolejne ruchy. Oparł się łokciami o blat i zapatrzył się na wirydarz. W dole, pod wielkim drzewem coś się ruszało. Wytężył wzrok i zobaczył dwie postaci. Jedną ubraną w sutannę, a drugą w dziwnym białym łachmanie. Może to była piżama. Zwątpił. Właściwie było jeszcze wcześnie. Potrzebował coś zjeść. Postaci za oknem ruszały się niespokojnie. Jasna postać chyba wymachiwała rękami. Usłyszał trzask drzwi na korytarzu i lekko podskoczył. Nigdy nie wiadomo kto na ciebie patrzy. 
+
+[[ZOSTAŃ W DORMITORIUM]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]
+</tw-passagedata><tw-passagedata pid="24" name="MAPA SESJA PORANNA" tags="" position="1450,1100" size="100,100">
+&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;00cc99&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;00cc99&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area alt=&quot;KORYTARZ PRZY ROZMÓWNICY&quot; title=&quot;KORYTARZ PRZY ROZMÓWNICY&quot; data-passage=&quot;KORYTARZ PRZY ROZMÓWNICY&quot; coords=&quot;295,1145,602,1176&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;ROZMOWNICA&quot; title=&quot;ROZMOWNICA&quot; data-passage=&quot;ROZMOWNICA&quot; coords=&quot;300,1137,333,1039&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;WIRYDARZ 2&quot; title=&quot;WIRYDARZ 2&quot; data-passage=&quot;WIRYDARZ 2&quot; coords=&quot;300,744,565,1037&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="25" name="ROZMOWNICA" tags="" position="1250,1300" size="100,100">-Drodzy bracia, mamy rozpisany cały program. Pieniądze z dotacji zostaną przekazane na sekcje Caritasu szkolące nowych wolontariuszy. Wybudujemy nowy ośrodek w Lednicy.
+
+Nie czuł zaskoczeni słowami biskupa. Był przygotowany na piękne słowa i wielkie deklaracje. Widział na twarzach zebranych, że większość zebranych nie widzi zagrożeń w działaniach biskupa, ale on wiedział. Te pieniądze rozpłyną się zanim skończy się rok. Wziął głęboki oddech i przygotował się do swojego wystąpienia.
+
+Ksiądz Janusz podziękował biskupowi i zaprosił kolejne osoby do zabierania głosu. Nie czekał i od razu wstał i głośno się przedstawił.
+- Drodzy, kolejne ośrodki dla szkoleń nie są potrzebne. Mamy od tego kościoły, w których przecież codziennie zbierają się wierni. Można je wykorzystać do przeprowadzenia szkoleń, wyznaczyć konkretne parafie…  Pieniądze mogą wspomóc potrzebujących od razu, bez wydłużania procesu niesienia pomocy!
+Biskup mierzył go groźnym wzrokiem. Po sali poniosły się szepty. Uderzył w smoka. Miał już kontynuować dalej, odczytując przygotowany raport z prognozą wydatków dotyczącą sieci jadłodajni, ale wtedy jego spojrzenie zatrzymało się na sylwetce naprzeciwko niego. Ręce należące do księdza Tadeusza podrygiwały konwulsyjnie. Miały dziwny odcień.
+- Pragnę przedstawić… przedstawić - drżenie tych rąk było coraz silniejsze. Czy tylko on to widział?
+- Chłopcze, proszę nie marnować czasu, mamy jeszcze kilku braci, którzy chcą przemawiać - odezwał się poirytowany ksiądz Janusz.
+Nie mógł zebrać myśli, spojrzał w dół na notatki i kontynuował, ale nie wiedział co mówi. Jego myśli rozpierzchły się na wszystkie strony i czuł, że smok wygrywa, że to wszystko poszło na marne.
+
+[[ZOSTAŃ NA ROZMÓWNICY-&gt;ROZMÓWNICA 2]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="26" name="KORYTARZ PRZY ROZMÓWNICY" tags="" position="1450,1300" size="100,100">Uchylił lekko drzwi do rozmównicy i szybko przeskanował wzrokiem stoły. Kawa jest, ciastka są, nic nie trzeba dokładać. 
+	Właśnie przemawiał ten fajny ksiądz. Zawsze zagadał i w ogóle. Z nim to by nawet zapalił.
+	Na końcu stołu, blisko biskupa Jeremiasza toczyły się przyciszone rozmowy. Nie byli chyba zmartwieni. Julian wiedział tyle, że już zdążyli gadać o tiktoku. Parsknął pod nosem. Już sobie wyobrażał jak sześćdziesięcioletni faceci w sutannach nagrywają filmiki na zakrystii. Jak to przejdzie to będzie niezły materiał latał po necie.
+	Jego wzrok powrócił do przemawiającego. Trochę się zaczął zacinać i wpatrywał się w osoby siedzące po drugiej stronie stołu. Chyba się zawiesił na tym księdzu co się zawsze modlił skoro świt. Dziwny był. Zawsze sam wszędzie, prawie się nie odzywał. Ksiądz Robert może szukał w pustelniku jakiegoś wsparcia. 
+	Julian usłyszał wołanie z kuchni i po cichu zamknął drzwi.
+
+[[ZOSTAŃ NA KORYTARZU PRZY ROZMÓWNICY]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="27" name="WIRYDARZ 2" tags="" position="1650,1300" size="100,100">Wyszła się przewietrzyć. Teraz godzinka spokoju, bo tęgie głowy myślą. Liczyła, że Jeremiasz nie będzie miał problemów z przegłosowaniem dotacji na ich projekt. Zawsze mogła na niego liczyć. 
+Chciałaby już nie siedzieć w kuchni tylko wpadać i zrzucić komuś zadania, a sama wrócić do domu i gotować prawdziwe dania. Dla przyjemności. Pomyślała o gołąbkach, które musiała zawijać po raz dziesiąty w tym miesiącu. Była już tym zmęczona. Rozejrzała się po dziedzińcu. Lubiła stać przy murku, w cieniu tych kolumienek. Była trochę schowana i jednocześnie widziała wszystko co się dzieje przed nią.
+Odpaliła papierosa i zaciągnęła się głęboko. Wtedy usłyszała głos nadciągający z lewej strony. Ktoś się zbliżał. Na dziedziniec wypadła sylwetka pogrążona w jakiejś rozmowie. Michał. Rozmawiał z kimś przez telefon. Ponownie przyłożyła papierosa do ust i nadstawiła uszu.
+- Ale mamo! Jestem w pracy! Jak to jedziesz? Tutaj?! - darł się do telefonu Michał. 
+Bardziej lubiła Juliana, dobrze mu z oczu patrzyło, ale Michał też był w porządku. Nie podobało się jej jednak, że w czasie gdy powinien zaglądać na salę rozmawiał przez telefon.
+- Jak przyjedziesz to cię od razu stąd odwożę, nie ma mowy…no nie płacz, boże, przecież jestem w pracy.
+Już jakiś czas temu domyśliła się, że ta jego matka to musi być specyficzna. Stwierdziła, że dosyć się nasłuchała. Zgasiła papierosa i wróciła do kuchni.
+
+
+[[ZOSTAŃ NA WIRYDARZU-&gt;WIRYDARZ 3]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="28" name="MAPA PRZERWA KAWOWA" tags="" position="1450,1500" size="100,100">[[PARKING]]
+HiddenCarpenterMoves39
+&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;00cc99&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;00cc99&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area alt=&quot;ROZMÓWNICA 2&quot; title=&quot;ROZMÓWNICA 2&quot; data-passage=&quot;ROZMÓWNICA 2&quot; coords=&quot;300,1137,333,1039&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;WIRYDARZ 3&quot; title=&quot;WIRYDARZ 3&quot; data-passage=&quot;WIRYDARZ 3&quot; coords=&quot;300,744,565,1037&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;REFEKTARZ&quot; title=&quot;REFEKTARZ&quot; data-passage=&quot;REFEKTARZ&quot; coords=&quot;574,747,683,1039&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;KUCHNIA MNICHÓW 4&quot; title=&quot;KUCHNIA MNICHÓW 4&quot; data-passage=&quot;KUCHNIA MNICHÓW 4&quot; coords=&quot;600,1062,683,1147&quot; shape=&quot;rect&quot;&gt;
+
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="29" name="ROZMÓWNICA 2" tags="" position="1050,1700" size="100,100">Tył sali konferencyjnej. Rozstawione termosy, plastikowe kubki, ciastka, które wyglądają bardziej jak dekoracja niż jedzenie. Marcin stoi przy stoliku, aparat ma przewieszony przez ramię. Obserwuje ludzi tak, jakby już kadrował ich do zdjęć. Janusz podchodzi szybko, nerwowo. Bierze kubek kawy, nawet nie patrząc.
+– Przerwy to marnowanie czasu – mówi.
+Marcin nie reaguje. Sprawdza aparat.
+– Ludzie bez przerw się męczą i nie myślą racjonalnie– odpowiada spokojnie.
+Janusz parska.
+– Ludzie powinni działać, nie odpoczywać.
+Robi gwałtowny gest ręką. Marcin w tym momencie podnosi swój kubek kawy, jakby chciał tylko poprawić chwyt. Ruch jest minimalny, prawie niezauważalny. Kawa wylewa się idealnie w bok. Prosto na Janusza. Cisza. Brązowa plama rozlewa się po jego koloratce i koszuli. Janusz zamiera.
+– Co ty robisz?!
+Marcin patrzy na niego przez chwilę, jakby oceniał kompozycję.
+– Przepraszam.
+Janusz powoli ociera rękawem plamę. Twarz mu twardnieje.
+– To nie jest śmieszne.
+Marcin unosi aparat i robi zdjęcie.
+Migawka przecina powietrze.
+Janusz mruży oczy.
+– Wykasuj to natychmiast.
+Marcin patrzy na ekran, myśli, po czym odpowiada z lekkim uśmieszkiem:
+– Zastanowię się.
+Janusz robi krok bliżej.
+– Wiesz, że to brak szacunku?
+Marcin delikatnie opuszcza aparat i wzrusza ramionami, wciąż z uśmiechem na twarzy. Januws patrzy na niego wnikliwie. Odwraca się i odchodzi bez słowa, zostawiając mokry ślad na podłodze. Marcin zostaje. Sprawdza zdjęcie. Nie usuwa.
+
+[[ZOSTAŃ NA ROZMÓWNICY-&gt;ROZMÓWNICA 3]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="30" name="PARKING" tags="" position="1250,1700" size="100,100">Wredny ksiądz wreszcie sobie poszedł. Julian już się nie martwił. Halina go nie zwolni, bo są zbyt dobrze zgrani. Zaciągnął się ponownie i oparł głowę o ścianę. 
+Usłyszał otwierające się drzwi i już myślał, że tamten ksiądz wraca, ale na parkingu pojawił się biskup. Nie zauważył go, bo Julian stał schowany za koszami. Dobrze, nie potrzebuje kolejnej reprymendy.
+Rozległ się dzwonek telefonu i biskup wyciągnął z kieszeni wielkiego smartfona. 
+- Nic się nie martw. Głosowania pójdą dobrze - rzucił do słuchawki bez zbędnych przywitań.
+Julian zaczął się zastanawiać kto może być po drugiej stronie słuchawki. 
+- Słuchaj, dostajesz swoją część i się więcej nie widzimy, a jej dajesz spokój, jasne? Jeśli jakiś świątobliwy będzie blokował na głosowaniu to sobie z nim poradzimy. Nie… słuchaj człowieku…nie… ją już zostawiasz w spokoju…tyle ode mnie - powiedział do słuchawki i się rozłączył. 
+Julian podejrzewał, że coś grubego się święci na tym synodzie. Biskup coś kręcił na boku, nie ma bata. Wycofał się po cichu do kuchni i stwierdził, że musi to opowiedzieć Marcinowi.
+
+[[ZOSTAŃ NA PARKINGU]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="31" name="REFEKTARZ" tags="" position="1650,1700" size="100,100">Kobieta wyglądała na roztrzęsioną. Halina podeszla do niej z kubkiem herbaty.
+- Niech się pani napije. Proszę tu usiąść - matka Marcina podniosła na nią wzrok i skinęła delikatnie głową. 
+- Wie pani - zaczęła kobieta. - Ja chciałam tylko się upewnić, że jemu nic nie jest. Nie dzwonił, nie odzywał się w ogóle i przestałam wierzyć, że on naprawdę jest na tym synodzie i gotuje.
+- Marcin to bardzo zaradny chłopak - rzuciła Halina w poczuciu, że musi jakoś go bronić.
+Kobieta westchnęła i wyjęła chusteczkę z torebki by przetrzeć spocone czoło.
+- Nie myślałam, że on tak na mnie nakrzyczy - jej głos załamał się lekko, ale kontynuowała. - ale chciałam tu przyjechać, bo tak sobie pomyślałam, że może pogadam z którym księdzem i jakoś pomogą naszej sprawie. Nie wiem czy Marcin wspominał coś pani, ale nam nie przyznali pieniędzy na opiekę nad córką.
+Halina nie wiedziała nawet, że Marcin ma siostrę. Słuchała, czując jakby się pakowała z butami w życie swojego pracownika.
+- Zawsze z Caritasu była pomoc, aż się skończyło. Co ja się wymodliłam… A tutaj akurat ten zjazd i księży tyle to ja pomyślałam, że na pewno coś się uda zdziałać i się znajdą te pieniądze.
+Kobieta wzięła łyk herbaty i zawiesiła głowę.
+- A kiedy te pieniądze zablokowali - zapytała. Janusz może by coś pomógł jak mu powie.
+- Dwa lata temu, powiedzieli, że muszą potrzebującym teraz dać gdzie indziej, gdzieś w jakimś ośrodku w Lądku czy coś takiego.
+Halina zamarła. Dobrze wiedziała co się działo dwa lata temu w Lądku. Kobieta zaczęła opowiadać o córce o opiece nad nią, jednak Halina już nie słuchała. Spojrzała w oczy matki, która przeżywała największą tragedię życia. Tragedię za którą odpowiadała ona sama i Janusz…
+
+[[ZOSTAŃ NA REFEKTARZU]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="32" name="WIRYDARZ 3" tags="" position="1450,1700" size="100,100">Janusz wychodzi szybko na plac za budynkiem, wciąż zdenerwowany incydentem kawowym. Idzie jak człowiek, który właśnie postanowił, że nikt już dziś nie będzie miał spokoju. Zatrzymuje się. Za rogiem stoi Julian. Opiera się o ścianę, spokojny, jakby czas go nie dotyczył. W dłoni trzyma jointa. Zaciąga się powoli. Wypuszcza dym. Janusz patrzy przez sekundę, jakby mózg próbował to przetworzyć na coś akceptowalnego.
+– Co ty robisz?!
+Julian nawet się nie spina. Tylko zerka w jego stronę.
+– Oddycham.
+Janusz robi krok bliżej.
+– To jest narkotyk.
+Julian wzrusza ramionami.
+– To jest roślina.
+Chwila ciszy. Dym unosi się między nimi jak trzeci uczestnik rozmowy.
+Janusz wskazuje na niego palcem.
+– Wiesz, że jesteś księdzem?
+Julian zaciąga się jeszcze raz.
+– Wiem. Dlatego robię to na zewnątrz.
+Janusz zaciska szczękę.
+– W kościele są zasady.
+Julian patrzy na niego spokojnie, jak na człowieka, który właśnie powiedział coś bardzo oczywistego.
+– W kościele są też ludzie. A ludzie mają swoje potrzeby.
+Janusz milknie na moment. Słychać tylko szum ulicy w oddali. Julian odsuwa jointa, jakby chciał go zgasić, ale jeszcze się waha.
+– Chcesz spróbować czy przyszedłeś tylko moralizować?
+Janusz patrzy na niego długo.
+– Nie przybliżaj do mnie tego świństwa. Ja przyszedłem zatrzymać to co się tutaj wyprawia!
+Julian uśmiecha się lekko.
+– To powodzenia.
+Dym znów unosi się między nimi. Janusz stoi jeszcze chwilę, potem odwraca się gwałtownie i odchodzi, zostawiając za sobą tylko echo własnej irytacji.
+
+
+[[ZOSTAŃ NA WIRYDARZU]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="33" name="KUCHNIA MNICHÓW 4" tags="" position="1850,1700" size="100,100">Kuchnia w biegu. Ktoś woła o kawę, ekspres syczy, kubki stukają. Wchodzi tylko na chwilę. Bierze tacę. I zastyga. Worek z mąką. Stoi w kącie.
+– Nie… – mówi pod nosem.
+Przecież został wyrzucony. Wczoraj. Na pewno. Ktoś mija go obok.
+– Przyszedłeś tu pomóc czy się rozglądać?
+Nie odpowiada. Czeka, aż kuchnia się opróżni i podchodzi do kąta. Podnosi worek. Ciężki. Rozgląda się szybko. Gdzie to teraz schować?
+– Ktoś bierze kawę czy nie?! – krzyczy ktoś z sali.
+– TAK! – rzuca automatycznie.
+Ale nadal stoi. Z workiem w rękach. Dochodzi do chwilowego paraliżu.
+
+Dźwięk kroków zbliżających się do kuchni przerywa chwilę hipnotycznego odrętwienia. Worek zostaje odłożony na miejsce, a z kuchni szybko wylatuje taca z kawą.
+
+
+[[ZOSTAŃ W KUCHNI-&gt;KUCHNIA MNICHÓW 5]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="34" name="MAPA DRUGA SESJA OBRAD" tags="" position="1450,1950" size="100,100">&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;00cc99&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;00cc99&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area target=&quot;&quot; alt=&quot;ROZMÓWNICA 3&quot; title=&quot;ROZMÓWNICA 3&quot; data-passage=&quot;ROZMÓWNICA 3&quot; coords=&quot;295,1145,602,1176&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;SPIŻARNIA&quot; title=&quot;SPIŻARNIA&quot; data-passage=&quot;SPIŻARNIA&quot; coords=&quot;334,1039,566,1149&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;KUCHNIA MNICHÓW 5&quot; title=&quot;KUCHNIA MNICHÓW 5&quot; data-passage=&quot;KUCHNIA MNICHÓW 5&quot; coords=&quot;600,1062,683,1147&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;KORYTARZ 2&quot; title=&quot;KORYTARZ 2&quot; data-passage=&quot;KORYTARZ 2&quot; coords=&quot;687,1075,767,468&quot; shape=&quot;rect&quot;&gt;
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="35" name="ROZMÓWNICA 3" tags="" position="1075,2100" size="100,100">– Większością głosów odrzucamy projekt zwiększenia użycia platformy tik tok. Proszę wszystkich o przygotowanie się do drugiej części głosowań - ogłosił Janusz i usiadł zadowolony na swoim miejscu.
+Udało się, nie będzie herezji. Będzie musiał podziękować Jeremiaszowi, warto było się dogadać.
+Na sali rozbrzmiały rozmowy. Zobaczył, że jedynym który milczał był ten młody ksiądz. Ksiądz Robert. Janusz nie mógł znieść jego wymysłów. Jakieś koncerty w kościele, wycieczki w góry z młodzieżą… Prowadzał się jakby nie był księdzem.
+Z sali ktoś wyszedł i dopiero wtedy wzrok młodego księdza się podniósł. Patrzył tak w drzwi jeszcze długo po tym, gdy zamknęły się za jednym z zebranych.
+
+
+[[ZOSTAŃ NA ROZMÓWNICY]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="36" name="KORYTARZ 2" tags="" position="1300,2100" size="100,100">Ksiądz Janusz nie ukrywał zadowolenia. Nie znała drugiej takiej osoby, która byłaby w stu procentach przekonana o swojej racji. Czasem mają wrażenie, że żeby postawić na swoim nie cofnąłby się przed niczym.
+Wróciła się do kuchni, żeby zlecić chłopakom uzupełnienie termosów z kawą. Złościła się, że musi chodzić taki kawał do tej sali, aż przy samym kościele. Nogi będą ją boleć po tym tygodniu.
+Usłyszała kroki za sobą i po obejrzeniu się zobaczyła księdza Roberta. Skinął jej głową, gdy ją wyprzedzał po czym skręcił w kierunku kościoła. 
+Lubiła go, nie był nadęty. Szkoda tylko, że tak się upierał na te jadłodajnie. W sumie to zrobiło się jej go żal. Chciał dobrze, tylko był zbyt naiwny. Kościół to firma i Janusz umiał nią zarządzać.
+Spojrzała jeszcze raz za młodym księdzem i zobaczyła jak schodzi do kaplic pod kościołem. Przyda mu się ciszą, a zmarli się nie odzywają.
+
+[[ZOSTAŃ NA KORYTARZU-&gt;KORYTARZ 3]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]
+</tw-passagedata><tw-passagedata pid="37" name="KUCHNIA MNICHÓW 5" tags="" position="1800,2100" size="100,100">Robił makaron, ale w pojemniku skończyła się mąka. Umył sklejone ręce w zlewie i skierował się w stronę zapasów. Za mało zamówili składników.
+Spojrzał na spiżarnię i zobaczył, że nie ma tamtego worka ze śmietnika. Przecież go tu kładł. Świeża mąka, a teraz będzie musiał się dokopać do kartonów z nieotwartymi opakowaniami.
+Westchnął zirytowany.
+– Co tam wzdychasz Julek - rzuciła do niego przechodząca Halina.
+– Ej a nie widziałaś tego worka z mąką co tu stał? - zapytał szefową.
+– Nie, nie widziałam.
+– Nie wywaliłaś przypadkiem.
+– Gdzie ja ci synek produkty wywalę - rzuciła Halina i ruszyła w kierunku kuchenki.
+Dziwne. Pozostało mu zanurkować w kartony.
+
+[[ZOSTAŃ W KUCHNI-&gt;KUCHNIA MNICHÓW 6]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="38" name="SPIŻARNIA" tags="" position="1600,2100" size="100,100">– O matko przenajświętsza, co ty mówisz synku?
+– Dokładnie tak mamo, ci twoi księża zrobili takie przekręty, że nie mamy na opiekę Natalii - wysapał wściekle Marcin.
+Kobieta patrzyła na syna niedowierzająco, gwałtownie kręcąc głową na boki.
+– Nie synku, coś sobie ubzdurałeś.
+– Nie mamo, zobacz - wyciągnął przed siebie kamerę. - Mam wszystko nagrane.
+Kobieta pochyliła się nad małym ekranem i zobaczyła jak na ekranie pojawiają się sylwetki dwóch księży. Rozległy się ich głosy. Mężczyźni omawiali projekty Caritasu. Jeden z nich, ten którego widziała czasem w telewizji rzucił: “teraz pójdzie gładko, jak z tym Lądkiem. Wszystko pójdzie na projekt, a my po drodze wyciągniemy swoją działkę. Żeby nie było problemów to teraz też część kwoty pójdzie na tych wolontariuszy”. Kamera się zatrzęsła i nagranie się skończyło.
+– Tyle nagrałem, bo mnie usłyszeli. Ale mówię ci mamo, oni wzięli pieniądze do własnej kieszeni i dlatego ucięli nam pomoc.
+Kobieta zbladła i zaczęła płytko oddychać
+– Niedobrze, niedobrze mi synek… - zaczęła się przechylać na ścianę i Marvim chwycił ją zanim całkowicie ugięły się pod nią nogi.
+– Mamo, mamo! - wydarł się spanikowany. 
+Nagle wyłonił się Julian. Gdy zobaczył leżącą kobietę zaczął pytać co się stało.
+– Zasłabła, dzwoń po pomoc - rzucił Marcin, ale wtedy matka się ocknęła.
+– Nic mi nie jest, żadnego pogotowia.
+– Znam tu lekarza miejscowego, zadzwonię do niego - wtrącił się Julian.
+Marcin zastanawiał się chwilę czy nie powi nie wezwać pogotowia, ale wiedział, że to jeszcze bardziej zdenerwuje matkę.
+– Dobra, dzwoń.
+
+
+[[ZOSTAŃ W SPIŻARNI]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="39" name="MAPA OBIAD" tags="" position="1425,2400" size="100,100">&lt;&lt;script&gt;&gt;
+
+$(&quot;img[usemap]&quot;).maphilight({
+  fill: true,             	// Fill the area?
+  fillColor: &#39;cccccc&#39;,    	// HEX format without the starting &quot;#&quot;
+  fillOpacity: 0.5,       	// Opacity of the filled area
+  stroke: true,           	// Outline the area?
+  strokeColor: &#39;cccccc&#39;,
+  strokeOpacity: 1,
+  strokeWidth: 3,			// Outline width
+  fade: true,             	// Animate when hovered with a fade?
+  alwaysOn: false,        	// Always show the areas?
+  neverOn: false,
+  groupBy: false,
+  wrapClass: true,
+  shadow: false,
+  shadowX: 0,
+  shadowY: 0,
+  shadowRadius: 6,
+  shadowColor: &#39;000000&#39;,
+  shadowOpacity: 0.8,
+  shadowPosition: &#39;outside&#39;,
+  shadowFrom: false
+});
+
+&lt;&lt;/script&gt;&gt;
+
+&lt;div style=&quot;display: flex; align-items: flex-start; justify-content: flex-start; width: 100%;&quot;&gt;
+    &lt;div style=&quot;margin-right: 20px; flex-shrink: 0;&quot;&gt;
+
+    &lt;/div&gt;
+    
+    &lt;!-- Pudełko ochronne o wysokości 80vh --&gt;
+    &lt;div id=&quot;loc-map-box&quot; style=&quot;height: 80vh; flex-shrink: 0; position: relative;&quot;&gt;
+        &lt;!-- Obrazek celowo nie ma tutaj wpisanego CSS height/width, skrypt to zrobi --&gt;
+        &lt;img src=&quot;mapa.png&quot; usemap=&quot;#image-map&quot; id=&quot;map-image&quot; style=&quot;opacity: 0;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+
+    &lt;area alt=&quot;REFEKTARZ 2&quot; title=&quot;REFEKTARZ 2&quot; data-passage=&quot;REFEKTARZ 2&quot; coords=&quot;574,747,683,1039&quot; shape=&quot;rect&quot;&gt;
+    &lt;area alt=&quot;KUCHNIA MNICHÓW 6&quot; title=&quot;KUCHNIA MNICHÓW 6&quot; data-passage=&quot;KUCHNIA MNICHÓW 6&quot; coords=&quot;600,1062,683,1147&quot; shape=&quot;rect&quot;&gt;
+        &lt;area alt=&quot;KORYTARZ 3&quot; title=&quot;KORYTARZ 3&quot; data-passage=&quot;KORYTARZ 3&quot; coords=&quot;687,1075,767,468&quot; shape=&quot;rect&quot;&gt;
+
+&lt;/map&gt;
+
+&lt;script&gt;
+// Bezpieczny start dla każdego formatu Twine
+setTimeout(function() {
+    var $img = $(&#39;#map-image&#39;);
+    var $box = $(&#39;#loc-map-box&#39;);
+    var lastH = -1;
+
+    if (!$img.length) return; // Zabezpieczenie, jeśli obrazka nie ma
+
+    // 1. Kopia zapasowa oryginalnych współrzędnych
+    $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+        if (!$(this).attr(&#39;data-orig-coords&#39;)) {
+            $(this).attr(&#39;data-orig-coords&#39;, $(this).attr(&#39;coords&#39;));
+        }
+    });
+
+    function renderMap() {
+        // Czekamy, aż plik fizycznie się wczyta
+        if (!$img[0].complete || $img[0].naturalWidth === 0) {
+            setTimeout(renderMap, 50);
+            return;
+        }
+
+        var curH = $box.height();
+        if (curH === 0 || curH === lastH) return;
+        lastH = curH;
+
+        // 2. Zdjęcie starego maphilight
+        if ($img.parent().hasClass(&#39;maphilight-wrapper&#39;)) {
+            $img.siblings(&#39;canvas&#39;).remove();
+            $img.unwrap();
+        }
+
+        // 3. Obliczenie nowych, twardych wymiarów
+        var natW = $img[0].naturalWidth;
+        var natH = $img[0].naturalHeight;
+        var ratio = natW / natH;
+        
+        var targetH = curH; // Bierzemy fizyczne piksele z 80vh
+        var targetW = targetH * ratio;
+
+        // KLUCZOWE: Wmuszamy twarde parametry HTML, których maphilight szuka!
+        $img.attr(&#39;width&#39;, targetW).attr(&#39;height&#39;, targetH);
+        $img.css({
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;opacity&#39;: 1 // Przywracamy widoczność, by wtyczka mogła działać
+        });
+
+        // 4. Skalowanie współrzędnych obszarów
+        var scaleX = targetW / natW;
+        var scaleY = targetH / natH;
+
+        $(&#39;map[name=&quot;image-map&quot;] area&#39;).each(function() {
+            var orig = $(this).attr(&#39;data-orig-coords&#39;).split(&#39;,&#39;);
+            var scaled = orig.map(function(val, index) {
+                return Math.round(val * (index % 2 === 0 ? scaleX : scaleY)); 
+            });
+            $(this).attr(&#39;coords&#39;, scaled.join(&#39;,&#39;));
+        });
+
+        // 5. Dopiero teraz bezpiecznie nakładamy maphilight
+        $img.maphilight({
+            fill: true, fillColor: &#39;dd319b&#39;, fillOpacity: 0.5,
+            stroke: true, strokeColor: &#39;ef9ace&#39;, strokeOpacity: 1, strokeWidth: 3,
+            alwaysOn: true, neverOn: false, fade: false,
+            wrapClass: &#39;maphilight-wrapper&#39;
+        });
+        
+        // Stabilizujemy wygenerowany wrapper dla Flexboxa
+        $img.parent(&#39;.maphilight-wrapper&#39;).css({
+            &#39;display&#39;: &#39;block&#39;,
+            &#39;width&#39;: targetW + &#39;px&#39;,
+            &#39;height&#39;: targetH + &#39;px&#39;,
+            &#39;flex-shrink&#39;: &#39;0&#39;
+        });
+    }
+
+    renderMap();
+
+    // Reakcja na reskalowanie okna
+    var resizeTimer;
+    $(window).off(&#39;resize.map&#39;).on(&#39;resize.map&#39;, function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(renderMap, 150);
+    });
+}, 100);
+&lt;/script&gt;</tw-passagedata><tw-passagedata pid="40" name="REFEKTARZ 2" tags="" position="1100,2600" size="100,100">Nie mógł uwierzyć. Świętoszek martwy. To jego ciało będzie się śniło Julianowi po nocach. Powinni teraz serwować zupę, ale Marcin został z tym sam. 
+Julian otworzył drzwi do refektarza i skierował się na sam koniec sali. Do biskupa. Gdy podszedł do niego, starszy mężczyzna spojrzał na niego pytająco. Julian nachylił się i wyszeptał mu do ucha nowiny.
+– Biskupie, mamy martwego księdza w sali od spotkań.
+– Co, co ty mówisz młody człowieku - odsapnął do niego biskup Jeremiasz.
+– Martwy, taki no trup.
+Biskup przekręcił się gwałtownie na krześle. Julian widział jak na jego twarzy przeskakują emocje. Po chwili Biskup podniósł się i skinął ręką na drzwi.
+– Prowadź.
+
+
+[[ZOSTAŃ NA REFEKTARZU-&gt;ZOSTAŃ NA REFEKTARZU2]]
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA KORONKA DO MIŁOSIERDZIA]]</tw-passagedata><tw-passagedata pid="41" name="KORYTARZ 3" tags="" position="1425,2600" size="100,100">Janusz zobaczył leżącą sylwetkę. Dobrze, że doktor był na miejscu, ale biedakowi już nie pomoże. 
+Ciało Tadeusza wyglądało okropnie. Nigdy w życiu czegoś takiego nie widział. Ręce całe sine i ta twarz… Odwrócił wzrok.
+Doktor zbliżył się do martwego i sprawdził puls. Pokręcił głową.
+– Zgon.
+– Ale co u licha się stało, on wygląda jakby mu ktoś ręce poprzypalał! - wypalił kucharz, który przyszedł poinformować Janusza o sytuacji.
+– Moi drodzy, nie mam pewności, ale to nie wygląda na naturalną śmierć. Zrobimy jeszcze oględziny, ale nie tu, macie pewnie jakąś infirmerię.
+– Tak, przeniesiemy ciało - odpowiedział Janusz. - Nikt nie może wiedzieć na razie - rzucił do obecnych. Jego myśli krążyły jak oszalałe. Jeszcze tylko policji tu brakowało.
+– Będę zmuszony wezwać służby jeśli będę miał podejrzenia co do przyczyny śmierci - powiedział ksiądz.
+Janusz powstrzymał przekleństwo. Spojrzał na Halinę. Po jej oczach widział, że choć nie daje po sobie nic poznać to jest roztrzęsiona. 
+– Doktorze, proszę się tym zająć, ale wzywać służby będziemy dopiero jak się doktor upewni. A teraz musimy zorganizować kogoś do pomocy. Młody człowieku - zwrócił się do kucharza. - idź po księdza Janusza i kogoś jeszcze. Tylko dyskretnie!
+Chłopak zniknął a Jeremiasz ponownie zetknął na ciało. Coś tu się działo.
+
+[[ZOSTAŃ NA KORYTARZU-&gt;KORYTARZ 4]]
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA KORONKA DO MIŁOSIERDZIA]]</tw-passagedata><tw-passagedata pid="42" name="KUCHNIA MNICHÓW 6" tags="" position="1700,2600" size="100,100">Halina czuła, że ma całe spocone plecy. Obiad będzie najgorszy, a później już z górki. Wyszła z kuchni z garnkiem zupy i skierowała się do refektarza.
+Skręciła w odpowiedni korytarz i wtedy zobaczyła, że ktoś leży na podłodze. Podeszła powoli bliżej i garnek prawie wysunął się jej z rąk.
+Na ziemi leżał ksiądz Tadeusz. Ledwo go poznała. Jego ciało było sine. Otrząsnęła się z szoku, odstawiła garnek na podłogę i uklękła przy księdzu by sprawdzić puls.
+Jej opuszki niczego nie wyczuły. Skóra księdza była lodowata. Halina objęła go wzrokiem i wtedy dostrzegła wygląd jego dłoni. Zassała gwałtownie powietrze. Jego dłonie były czarne i jakby zasuszone, niczym u mumii.
+- Szefowo? - usłyszała za swoimi plecami.
+Za nią stał zszokowany Julian. Halina otworzyła usta jak ryba wyrzucona z wody i padło z nich tylko: “Janusz”.
+
+[[ZOSTAŃ W KUCHNI-&gt;ZOSTAŃ W KUCHNI 3]]
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA KORONKA DO MIŁOSIERDZIA]]</tw-passagedata><tw-passagedata pid="43" name="MAPA KORONKA DO MIŁOSIERDZIA" tags="" position="1425,2800" size="100,100">[[KOŚCIÓŁ]]
+[[KORYTARZ-&gt;KORYTARZ 4]]
+[[POMIESZCZENIE MEDYCZNE]] </tw-passagedata><tw-passagedata pid="44" name="KOŚCIÓŁ" tags="" position="1100,3000" size="100,100">Myśli pędziły. Chyba teraz musi odczytać z tej strony. A może to było na innej zakładce? Ciągle śpiewali, więc miał chwilę. Otworzył teczkę z notatkami z poprzedniego posiedzenia i chwycił tablet. Odpalił Chata i wpisał zapytanie o kolejność odprawiania mszy. Na ekranie wyskoczyła mu ściana tekstu. Zaczął szybko czytać w myślach i w porę wychwycił fragment, który powinien za chwilę odczytać zebranym. Jego głos poniósł się po sali. Odczytał fragment z Ewangelii, po czym wszyscy usiedli. Myśli odpłynęły mu do bladej twarzy Janusza. Jego pewnie wyglądała tak samo. Byli w szoku. Po czymś takim, kto by nie był? Uniósł wzrok na zapełnione ławki. Oni jeszcze nie wiedzieli...a patrzyli jakby czekali, aż jego usta się otworzą i powie, i powie… ah tak! Przecież teraz miał wygłaszać homilię! Uderzyła go fala gorąca. Ostatni raz odprawiał mszę sam, bez wikariusza, jakieś piętnaście lat temu. Przecież przez to wszystko nawet nie przygotował sobie tekstu. Spojrzał na tablet i wpisał drżącym palcem w komendę: „tekst homilii”. Chat napisał kazanie i Jeremiasz zaczął czytać:
+Drodzy w wierze,
+ W dzisiejszym zabieganym świecie łatwo ulegamy złudzeniu, że nasza wartość i szczęście mierzone są stanem konta, sukcesami czy liczbą posiadanych rzeczy. Bardzo szybko wpadamy w pułapkę myślenia: „będę szczęśliwy, gdy tylko zdobędę... kupię... osiągnę”.
+Jego wzrok zaszedł mgłą, a małe litery stawiały opór w czasie czytania. Dotknął palcami ekranu, aby powiększyć tekst i przez przypadek kliknął ikonkę głośnika. Po kościele poniósł się uwodzicielski głos kobiety, który zaczął czytać kazanie od początku. Spanikowany Jeremiasz próbował wyłączyć Chata, ale nawet po jego zamknięciu, głos nie ucichł.
+Życie człowieka nie jest sumą jego dóbr materialnych. Pieniądze i rzeczy są w porządku, kiedy służą dobru i pomagają nam żyć. Stają się jednak problemem, kiedy to one zaczynają rządzić nami..
+Jeremiasz sapał głośno i zaczął nadawać do mikrofonu, próbując przekrzyczeć kobiecy głos. Po kościele niosły się szmery, głowy rozglądały się po sąsiadach, nikt do końca nie wiedział co się właściwie dzieje, a ona nadawała dalej. Jeremiasz w desperackim kroku zaczął naciskać guzik wyłącznika na tablecie, aż w końcu urządzenie umarło. Zresztą, nie ono pierwsze dzisiaj.
+
+
+[[ZOSTAŃ W KOŚCIELE]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PODSUMOWUJĄCA]]</tw-passagedata><tw-passagedata pid="45" name="KORYTARZ 4" tags="" position="1400,3000" size="100,100">Ciągle nie dowierzał co się dzisiaj działo. Ktoś był martwy, ktoś przy nim zasłabł. Gdyby był wierzący to zacząłby się modlić, żeby ten dzień się skończył.
+Gdy tak się rozmarzył o wolnym wieczorze, przed oczami przemknęła mu matka Marcina. Kierowała się do kościoła. Zobaczył jak gwałtownie otworzyła drzwi, po czym krzyknęła: “Złodzieje, złodzieje! Moją córeczkę okradli!”
+– O kurwa – sapnął do siebie.
+Matka Marcina przerwała mszę i wykrzykiwała kolejne oskarżenia. Julian stwierdził, że musi znaleźć Marcina, żeby ją zabrał. Co za chryja.
+Ruszył biegiem i wtedy zobaczył jak biskup znika w jakimś zejściu do podziemi. Nie miał czasem prowadzić mszy? Może zdecydował, że lepiej się ewakuować.
+Julian ruszył przed siebie.
+
+[[ZOSTAŃ NA KORYTARZU-&gt;KORYTARZ 5]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PODSUMOWUJĄCA]]</tw-passagedata><tw-passagedata pid="46" name="POMIESZCZENIE MEDYCZNE" tags="" position="1700,3000" size="100,100">– To jest ewidentne otrucie. Mieliśmy o tym na studiach i to jest działanie sporyszu. 
+Ciało martwego księdza leżało na łóżku w infirmerii.
+– A co to jest doktorze? - zapytał Janusz.
+– To taki trujący grzyb, musiał być w jedzeniu w jakiejś formie. Ale teraz wszystko jest testowane, więc zakładam, że jest duża szansa na ingerencję osób trzecich.
+Janusz patrzył tępo w martwego Tadeusza.
+– Morderstwo na synodzie… – wyszeptał i się przeżegnał.
+– Teraz muszę wezwać służby – powiedział doktor.
+Janusz skinął głową i zaczął się zastanawiać po co ktoś miałby zatruć księdza, który prawie do nikogo się nie odzywał.
+
+[[ZOSTAŃ W POMIESZCZENIU MEDYCZNYM]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PODSUMOWUJĄCA]]</tw-passagedata><tw-passagedata pid="47" name="MAPA SESJA PODSUMOWUJĄCA" tags="" position="1350,3200" size="100,100">[[ROZMÓWNICA-&gt;ROZMÓWNICA 4]]
+[[KATAKUMBY]]
+[[KORYTARZ-&gt;KORYTARZ 5]]
+</tw-passagedata><tw-passagedata pid="48" name="ROZMÓWNICA 4" tags="" position="1100,3400" size="100,100">Cała sala wrzała. Właśnie się dowiedział o przerwaniu mszy przez jakąś kobietę. Skąd ona się w ogóle wzięła na zamkniętym synodzie? Janusz pomyślał, że skoro każdy może tu wejść to może wpadł tu jakiś morderca i zabił biednego Tadeusza.NIedługo przyjedzie policja i dopiero się zacznie..
+Janusz spojrzał po członkach synodu i nie mógł dojrzeć Jeremiasza. Przecież miał prowadzić podsumowanie synodu.
+“Widział ktoś biskupa”, pytał kolejno zebranych. Ktoś mu powiedział, że Jeremiasz zniknął po wpadnięciu do kościoła tej opętanej kobiety. Później nikt go już nie widział.
+Zobaczył, że na sali pojawiła się pani Halina.
+– Pani Halino, czy widziała pani biskupa? – zapytał kobietę.
+– Nie, a coś się stało?
+– Zniknął po tej sytuacji z tą kobietą i od tej pory nikt go nie widział, a musi prowadzić sesję podsumowującą.
+Kobieta wyraźnie się zmartwiła. Chaos na sali wzrastał.
+– Musimy znaleźć biskupa – rzucił Janusz. Pani Halina skinęła głową i wtedy z boku dobiegł ich głos, który oznajmił: “Ja widziałem biskupa.”
+
+
+[[ZOSTAŃ NA ROZMÓWNICY-&gt;ZOSTAŃ NA ROZMÓWNICY 2]]
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA NIESZPORY]]</tw-passagedata><tw-passagedata pid="49" name="KATAKUMBY" tags="" position="1350,3400" size="100,100">Schodził powoli po kamiennych stopniach, trzymając się asekuracyjnie metalowej poręczy. Nigdy tu nie był. Ktoś musiał kiedyś przeciągnąć tu kable, bo podziemia były delikatnie oświetlone żółtym światłem starych lamp. Wszędzie były pajęczyny, a w powietrzu unosił się zapach stęchlizny. Po co ktoś miałby tu schodzić? Nabierał coraz większych podejrzeń. Nagle na samym dole usłyszał szuranie. Zszedł po ostatnich stopniach i skierował się do niskiego pomieszczenia za zakrętem korytarza. Nie chcąc zdradzić swojej obecności przystanął za ścianką przy zakręcie, po czym zajrzał do pomieszczenia. Jego oczom ukazała się ciemna sylwetka zamaszyście szorująca podłogę wielkimi grabiami. Co by ktoś uprawiał w katakumbach? Jeremiasz jak zahipnotyzowany próbował przetworzyć to, co widzi. Grabie rozcierały usypaną kupkę białego proszku. Gwałtownie wciągnął powietrze. Nie. Niemożliwe.
+– Pokaż twarz człowieku! - zawołał, wychodząc z ukrycia. Nieznajomy zastygł. - Narkotyki na synodzie! Co się dzisiaj tu wyprawia?! 
+Nieznajomy zacisnął ręce na grabiach. Zbulwersowany Jeremiasz skierował się w jego stronę, żeby dojrzeć kto przed nim stoi.
+– Halo! Mówię do…- słowa zamarły na jego ustach, gdy  nagle poczuł ból rozlewający się od jego skroni. Chyba upadł i zatrzepowtał opowiekami. W zasięgu jego wzroku znalazły się pięknie lakierowane buty, a później zapadła ciemność.
+
+[[ZOSTAŃ W KATAKUMBACH-&gt;KATAKUMBY 3]]
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA NIESZPORY]]</tw-passagedata><tw-passagedata pid="50" name="KORYTARZ 5" tags="" position="1600,3400" size="100,100">Usłyszał rozmowę wrednego księdza z szefową. Biskup zaginął.
+– Ja widziałem biskupa - powiedział do nich Julian. - Jak matka Marcina wparowała do kościoła to widziałem jak wchodził do kaplic pod kosciołem.
+Halina i ksiądz spojrzeli po sobie.
+– Idziemy - rzucił ksiądz wredota i kazał im podążać za sobą.
+
+Zostawili rozmównicę pełną gadających księży. Chyba synod się rozlazł na dobre. Nic już nie ustalą. Julian pokręcił głową i podążył za dwójką do katakumb.
+
+[[ZOSTAŃ NA KORYTARZU-&gt;ZOSTAŃ NA KORYTARZU 3]]
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA NIESZPORY]]</tw-passagedata><tw-passagedata pid="51" name="MAPA NIESZPORY" tags="" position="1350,3675" size="100,100">[[SCHODY DO KATAKUMB]] 
+[[WIRYDARZ-&gt;WIRYDARZ 4]]
+[[KATAKUMBY-&gt;KATAKUMBY 3]]
+</tw-passagedata><tw-passagedata pid="52" name="SCHODY DO KATAKUMB" tags="" position="1100,3900" size="100,100">Schody były śliskie, ale schodziła pewnie. Jak do piwnicy po zapasy. Tylko zapach był nie ten – zamiast kurzu osiadłego na słoikach i ziemniaków w workach, wilgoć i coś metalicznego.
+Szli jeden za drugim. Latarka księdza Janusza drgała, więc patrzyła bardziej pod nogi niż przed siebie. Ręką blokowała przejście Julianowi. Miała potrzebę osłaniać go przed czymkolwiek co czyhało pod ziemią.
+Schody były miękkie od lat, wydeptane. Bała się dotykać czegokolwiek, niepewna co znajduje się na ścianach. W jej wyobraźni wszystko powinno być pokryte ludzkimi kośćmi, ale pewnie był to tylko kamień łupany. Przynajmniej na klatce.
+Po zejściu ze schodów przystanęła przy ścianie. Dostrzegła smugę, rudą, jeszcze połyskującą. Nakazała Januszowi poświecić w tym kierunku.
+— Świeże — powiedziała, a nikt nie zapytał, skąd wie.
+Poszli szybciej. Korytarze zaczęły się plątać. Nie lubiła takich przestrzeni. W kuchni wszystko ma swoje miejsce.
+Wyszli do małej komory. Na środku stało krzesło. Zwykłe. Mokre. Ale nie pasowało do tej przestrzeni, jakby ktoś je tutaj przyniósł. To nie było jego miejsce.
+Podeszła i dotknęła oparcia.
+Z tyłu coś stuknęło. Odwróciła się od razu. Korytarz był pusty, ale krótszy niż przed chwilą. Jakby się skurczył.
+
+[[IDŹ NA UROCZYSTĄ KOLACJĘ]]</tw-passagedata><tw-passagedata pid="53" name="WIRYDARZ 4" tags="" position="1350,3900" size="100,100">Marcin usiadł na ławce na dziedzińcu i westchnął głęboko. Ja pierdole. Co za dzień. Nie spodziewał się, że matka odwali takie coś. Jak ktoś się wsłuchał w jej gadanie to wie, że Marcin ma dowody na biskupa. Czuł się nieswojo. Może nawet powinien opuścić synod.
+
+Oparł głowę na dłoni i wtedy zobaczył, że pod drzewem ktoś ciężko usiadł na ławce.. Ksiądz Robert. Stwierdził, że podejdzie i może mu się wygada. Komuś musiał.
+
+Wstał z ławki i skierował się do księdza. 
+– Można się przysiąść do księdza?
+Ksiądz Robert podniósł na niego wzrok.
+– Jasne Marcinie, siadaj.
+Ksiądz poprawił się na ławce i zaczął dłonią strzepywać coś białego z ciemnej koszuli. Siedzieli chwilę w ciszy po czym Marcin się odezwał.
+– Co zrobić proszę księdza, gdy ma się ochotę dosłownie kogoś zabić? 
+Ksiądz gwałtownie odwrócił się w jego stronę. Marcin czekał, ale ksiądz długo milczał.
+– Jakąkolwiek złość nosisz w sercu, to taki czyn nie przyniesie ci ulgi.
+Marcin przełknął ślinę. Wszystko w jego życiu poszło nie tak.
+– A co jeśli jest już za późno? – zapytał.
+Ksiądz Robert spojrzał w niebo.
+– Chcę wierzyć, że on i tak wybaczy – odparł.
+
+[[IDŹ NA UROCZYSTĄ KOLACJĘ]]</tw-passagedata><tw-passagedata pid="54" name="KATAKUMBY 3" tags="" position="1600,3900" size="100,100">Znaleźli biskupa. Leżał nieprzytomny na ziemi z zakrwawionym czołem. Szefowa próbowała go ocucić. Ksiądz wredota, aka ksiądz Janusz wybiegł już po pomoc. 
+
+Julian czuł się jak w jakimś tanim filmie sensacyjnym. Drugi trup. Chwilę po tym, gdy to pomyślał rozległ się jęk. Biskup zatrzepotał powiekami. Halina zaczęła chyba szlochać. Ja pierdziele. Co za akcja.
+
+Te katakumby były creepy. Julian poczuł dreszcz. Co tu się w ogóle stało? Obok biskupa było coś rozsypane. Julian schylił się i zobaczył biały proszek. Wziął szczyptę do ręki i roztarł. Mąka. Rozejrzał się po pomieszczeniu skąpanym w półmroku i wtedy dojrzał worek. Ten sam, który kilka godzin wcześniej znalazł na śmietniku…
+
+[[IDŹ NA UROCZYSTĄ KOLACJĘ]]</tw-passagedata><tw-passagedata pid="55" name="IDŹ NA UROCZYSTĄ KOLACJĘ" tags="" position="1325,4300" size="100,100">Biskup siedział na szczycie stołu w refektarzu. Wszyscy byli obecni.
+– Kto cię zaatakował Jeremiaszu? - zapytał ksiądz Janusz.
+Biskup pomacał bandaż na głowie i pokręcił głową.
+– Nie mam pojęcia. Nie widziałem twarzy.
+
+Dobrze, że doktor nie zdążył odjechać. Od razu zbadał biskupa. Będa jechali na prześwietlenie, ale to chyba nic poważnego. Na razie czekali na policję. Nieźle. Julianowi zaburczało w brzuchu. Przez te akcje nic prawie dzisiaj nie zjadł.
+– Drodzy – odezwał się biskup, wstając. – Muszę was poinformować o niespodziewanej tragedii. Ksiądz Tadeusz zmarł dzisiaj w niewyjaśnionych okolicznościach.
+
+Po sali poniosły się szmery.
+– Podejrzewam, że jest wśród nas morderca, który próbował zabić także mnie - kontynuował. – Kimkolwiek jesteś, wiedz, że prawda wyjdzie na jaw. Przyznaj się teraz, bo Stwórca i tak już wszystko wie.
+
+W sali zapanowało napięcie. Nikt się nie odzywał. Julian wciągnął brzuch, żeby nie było słyszeć burczenia. 
+
+Biskup ponownie otworzył usta, ale wtedy otworzyły się drzwi refektarza, a do środka wparowała policja.
+
+
+
+[[WYTYPUJ MORDERCĘ]]</tw-passagedata><tw-passagedata pid="56" name="ZOSTAŃ NA CMENTARZU" tags="" position="2475,900" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]</tw-passagedata><tw-passagedata pid="57" name="ZOSTAŃ NA KORYTARZU" tags="" position="2700,900" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PORANNA]]</tw-passagedata><tw-passagedata pid="58" name=" ZOSTAŃ W KUCHNI 2" tags="" position="2500,1300" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="59" name="ZOSTAŃ W DORMITORIUM" tags="" position="2300,1300" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="60" name="ZOSTAŃ NA KORYTARZU PRZY ROZMÓWNICY" tags="" position="2200,1700" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA DRUGA SESJA OBRAD]]</tw-passagedata><tw-passagedata pid="61" name="ZOSTAŃ NA PARKINGU" tags="" position="2575,2100" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="62" name="ZOSTAŃ NA WIRYDARZU" tags="" position="2350,2100" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="63" name="ZOSTAŃ NA REFEKTARZU" tags="" position="2175,2100" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA OBIAD]]</tw-passagedata><tw-passagedata pid="64" name="ZOSTAŃ NA ROZMÓWNICY" tags="" position="2400,2600" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA KORONKA DO MIŁOSIERDZIA]]</tw-passagedata><tw-passagedata pid="65" name="ZOSTAŃ W SPIŻARNI" tags="" position="2200,2600" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA KORONKA DO MIŁOSIERDZIA]]</tw-passagedata><tw-passagedata pid="66" name="ZOSTAŃ NA REFEKTARZU2" tags="" position="2300,3000" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PODSUMOWUJĄCA]]</tw-passagedata><tw-passagedata pid="67" name="ZOSTAŃ W KUCHNI 3" tags="" position="2100,3000" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA SESJA PODSUMOWUJĄCA]]</tw-passagedata><tw-passagedata pid="68" name="ZOSTAŃ W KOŚCIELE" tags="" position="2300,3400" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA NIESZPORY]]</tw-passagedata><tw-passagedata pid="69" name="ZOSTAŃ W POMIESZCZENIU MEDYCZNYM" tags="" position="2100,3400" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA NIESZPORY]]</tw-passagedata><tw-passagedata pid="70" name="ZOSTAŃ NA ROZMÓWNICY 2" tags="" position="2200,3900" size="100,100">Ups, nie dzieje się tu nic...
+
+[[Możesz już iść tylko na uroczystą kolację-&gt;IDŹ NA UROCZYSTĄ KOLACJĘ]]</tw-passagedata><tw-passagedata pid="71" name="ZOSTAŃ NA KORYTARZU 3" tags="" position="2000,3900" size="100,100">Ups, nie dzieje się tu nic...
+
+[[Możesz już iść tylko na uroczystą kolację-&gt;IDŹ NA UROCZYSTĄ KOLACJĘ]]</tw-passagedata><tw-passagedata pid="72" name="WYTYPUJ MORDERCĘ" tags="" position="1325,4500" size="100,100">
+[[Biskup Jeremiasz-&gt;ZŁAODP]]
+[[Ksiądz Janusz-&gt;ZŁAODP]]
+[[Ksiądz Robert-&gt;POPRAWNA ODP]]
+[[Ksiądz Tadeusz-&gt;ZŁAODP]]
+[[Kucharka Halina-&gt;ZŁAODP]]
+[[Kucharz Marcin-&gt;ZŁAODP]]
+[[Kucharz Julian-&gt;ZŁAODP]]
+[[Matka Marcina-&gt;ZŁAODP]]
+</tw-passagedata><tw-passagedata pid="73" name="POPRAWNA ODP" tags="" position="1175,4725" size="100,100">Pomysł podsunęli mu ministranci. Przyłapał ich na braniu grzybów w zakrystii. Nie powiedział nic ich rodzicom, ale grzyby skonfiskował.
+
+Gdy wrócił na plebanię zaczął czytać jakie grzyby się hoduje i co wywołują. Trafił na jakąś stronę w Internecie o różnych chorobach wywoływanych przez zatrucie grzybami. 
+
+“Ogień świętego Antoniego – zatrucie wywołane sporyszem”. To go zainteresowało. Pasowało do nich. Zabić smoka ogniem. Prawdziwie ironiczne. 
+
+Reszta potoczyła się sama. Zaraził zboże na kawałku pola za plebanią. Później narwał tyle ile potrzebował i starł ziarna na mąkę.NIe martwił się o zbiory rolnika, bo na pewno zboże nei przejdzie testów i nikt się nie zatruje.
+
+Biskup Jeremiasz musiał umrzeć. Tyle milionów skradzionych przez ostatnie lata nie było problemem samym w sobie. Problemem było, że skradzione miliony miały być przeznaczone na ratowanie chorych, ratowanie potrzebujących Ta kradzież zabiła ludzi.
+
+Kromka chleba, którą położył chwilę przed śniadaniem na talerzu biskupa miałą rozwiązać sprawę. Nie przewidział jednak, że ksiądz Tadeusz jadał przed wszystkimi i chwyci chleb, który czekał w refektarzu…
+
+Robert zabił człowieka pobożnego. Zabił owcę, a nie smoka. 
+</tw-passagedata><tw-passagedata pid="74" name="ZOSTAŃ NA KORYTARZU 100" tags="" position="2100,1300" size="100,100">Ups, nie dzieje się tu nic...
+
+[[ROZEJRZYJ SIĘ PO SYNODZIE-&gt;MAPA PRZERWA KAWOWA]]</tw-passagedata><tw-passagedata pid="75" name="ZŁAODP" tags="" position="1525,4725" size="100,100">Niestety, nie rozglądałeś się uważnie.
+
+[[Możesz spróbować jeszcze raz-&gt;start]]
+</tw-passagedata><tw-passagedata pid="76" name="Nienazwana scena 1" tags="" position="925,200" size="100,100">
+[[KUCHNIA MNICHÓW]]
+[[CMENTARZ]]
+[[KORYTARZ]]
+</tw-passagedata><tw-passagedata pid="77" name="Nienazwana scena 2" tags="" position="1050,675" size="100,100">[[ZOSTAŃ W KUCHNI
+[[WIRYDARZ
+[[KORYTARZ 100
+[[DORMITORIUM
+</tw-passagedata><tw-passagedata pid="78" name="StoryInit" tags="" position="1775,375" size="100,100">    &lt;&lt;set $activeEvent = 0&gt;&gt;
+&lt;&lt;run console.log(&quot;StoryInit&quot;, $activeEvent, $timeline)&gt;&gt;
+</tw-passagedata></tw-storydata>
+
+
+</body>
+</html>
